@@ -1,6 +1,11 @@
 import webview
 
-# Egyszerűen betöltjük a helyi index.html fájlt
-webview.create_window('Egyszerű App', 'index.html', width=400, height=300)
+# Szebb, modern méretezésű ablak
+webview.create_window(
+    title='Modern UI App',
+    url='index.html',
+    width=460,
+    height=540,
+    resizable=False
+)
 webview.start()
-
