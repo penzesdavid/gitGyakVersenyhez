@@ -1,20 +1,37 @@
 <!DOCTYPE html>
-<html>
+<html lang="hu">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern App</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <h2>Egyszerű Pywebview App</h2>
+    <div class="card">
+        <div class="icon-badge">✨</div>
+        <h2>Üdvözöllek!</h2>
+        <p class="subtitle">Egyszerű, modern felület pywebview-ban</p>
 
-    <!-- Gombok -->
-    <button onclick="koszones()">Köszönés</button>
-    <button onclick="torles()">Törlés</button>
+        <!-- Stílusos válaszdoboz / állapotjelző -->
+        <div id="status-card" class="status-box default">
+            <span id="status-icon">💡</span>
+            <span id="szoveg">Kattints egy gombra lent!</span>
+        </div>
 
-    <div id="szoveg">Kattints egy gombra!</div>
+        <!-- Kattintásszámláló -->
+        <div class="counter-badge">
+            Kattintások száma: <b id="click-count">0</b>
+        </div>
+
+        <!-- Gombok -->
+        <div class="button-group">
+            <button class="btn btn-primary" onclick="koszones()">👋 Köszönés</button>
+            <button class="btn btn-secondary" onclick="veletlenSzam()">🎲 Véletlen szám</button>
+            <button class="btn btn-danger" onclick="torles()">🔄 Alaphelyzet</button>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
 </html>
-
